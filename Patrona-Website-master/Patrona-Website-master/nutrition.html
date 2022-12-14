@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patrona</title>
+    <link rel="shortcut icon" href="./image/logo-dog-removebg-preview.png" type="image/jpg">
+    <script src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./nutrition.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet"
+        id="bootstrap-css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+
+</head>
+
+
+<body ng-app="">
+    <header>
+        <section>
+
+
+            <div class="cloudwave wave1"></div>
+            <div class="cloudwave wave2"></div>
+            <div class="cloudwave wave3"></div>
+
+
+        </section>
+        <nav class=" my-nav navbar navbar-light navbar-expand-lg bg-white  " style="width:100%">
+            <div class="container">
+
+
+                <a class="navbar-brand " href="./index.html"><img src="./image/Logo.png" alt="" style="width: 100px;"
+                        class="logo"></a>
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto  ">
+                        <li class="nav-item  " style="padding-top: 20px;">
+                            <a class="nav-link" href="./index.html">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item" style="padding-top: 20px;padding-left: 20px;">
+                            <a class="nav-link" href="./dogs.html">Dogs</a>
+                        </li>
+                        <li class="nav-item" style="padding-top: 20px;padding-left: 20px;">
+                            <a class="nav-link" href="./nutrition.html">Nutrition</a>
+                        </li>
+                        <li class="nav-item" style="padding-top: 20px;padding-left: 20px;">
+                            <a class="nav-link " href="./gallery.html">Gallery</a>
+                        </li>
+                        <li class="nav-item" style="padding-top: 20px;padding-left: 20px;">
+                            <a class="nav-link " href="./aboutus.html">About us</a>
+                        </li>
+                        <li class="nav-item" style="padding-top: 20px;padding-left: 20px;">
+                            <a class="nav-link " href="./contactus.html">Contact us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div id="carouselExampleIndicators" class="carousel slide my-carousel my-carousel" data-ride="carousel">
+
+
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+
+            <div class="carousel-inner" role="listbox">
+                <div class="carousel-item active   "
+                    style="background-image: url(./image/slider1.jpg); color:white;text-shadow:1px 1px black;  ">
+                    <h3 style="font-size: 50px;position:absolute;margin-top:22%;margin-left:35%;" class="">More Than A
+                        Passion!
+                        <p
+                            style="font-size: 30px;position:relative;margin-top:1%;margin-left:-30%;font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;">
+
+
+                            This is not a common website.This is the inspiration and destination of the owner </p>
+                    </h3>
+
+                </div>
+                <div class="carousel-item  "
+                    style="background-image: url(./image/slider2.jpg); color:white;;text-shadow:1px 1px black;">
+                    <h3 style="font-size: 50px;position:absolute;margin-top:20%;margin-left:30%;">Not Only Love, But
+                        Also Insight!
+                        <p
+                            style="font-size: 30px;position:relative;margin-top:0%;margin-left:-8%;font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;">
+                            Love wouldn't exist without insight, because insight contains love</p>
+                    </h3>
+
+
+                </div>
+                <div class="carousel-item "
+                    style="background-image: url(./image/slider3.jpg); color:white;;text-shadow:1px 1px black;">
+                    <h3 style="font-size: 50px;margin-top:23%;position:absolute;margin-left:36%">No Distance Between Us!
+                        <p
+                            style="font-size: 30px;position:relative;margin-top:1%;margin-left:-25%;font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;">
+                            Together we make a strong chain to mount the dog's lovers and
+                            beyond</p>
+                    </h3>
+
+
+
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+
+
+    </header>
+    <!-- end header  -->
+    <section id="service_2" class="clearfix">
+        <div class="container">
+            <div>
+                <div class="center clearfix">
+                    <h2 style="font-family: monospace;">NUTRITION</h2>
+                </div>
+                <div class="">
+                    <div class="row service_2_middle clearfix">
+                        <div class="col-sm-6 center_middle_left_service clearfix">
+                            <div class="center_7_middle_left_inner_1 clearfix">
+                                <div class="card">
+                                    <div class="row card-image">
+                                        <img class="img-fluid" src="image/1.png">
+                                    </div><!-- card image -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 service_2_middle_right clearfix">
+                            <div class="service_2_middle_right_inner clearfix"
+                                ng-init="myWeb_1 = 'https://myanimals.com/nutrition/6-essential-nutrients-your-dog-needs/'; myVar = 'LEARN MORE'">
+                                <h2>Nutrients Your Dog Needs</h2>
+                                <p>Nutrients are substances obtained from food and used by an animal as a source of
+                                    energy and as part of the metabolic machinery necessary for maintenance and
+                                    growth.
+                                    There are the essential classes of nutrients dogs need for optimum healthy
+                                    living
+                                    such as: water, proteins, fats, carbohydrates, vitamins, minerals, etc.</p>
+                                <h5><a ng-href="{{myWeb_1}}" style="background-color: black;">{{myVar}}</a></h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row service_2_middle clearfix">
+                        <div class="col-sm-6 center_middle_left_service clearfix">
+                            <div class="center_7_middle_left_inner_1 clearfix">
+                                <div class="card">
+                                    <div class="row card-image">
+                                        <img class="img-fluid" src="image/2.png">
+                                    </div><!-- card image -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 service_2_middle_right clearfix">
+                            <div class="service_2_middle_right_inner clearfix"
+                                ng-init="myWeb_2 = 'https://www.bestpuppyguide.com/puppy-weaning-food/'; myVar = 'LEARN MORE'">
+                                <h2>Weaning and Feeding Your Puppy</h2>
+                                <p>If you're responsible caring for puppies in the first few months of their lives,
+                                    you'll need to be prepared to move them from a diet of mom's milk to regular
+                                    puppy
+                                    food. This process of gradually reducing a puppy's dependency on his mother's
+                                    milk,
+                                    known as weaning, <br> should generally begin between three and four weeks of
+                                    age.
+                                </p>
+                                <h5><a ng-href="{{myWeb_2}}"
+                                        href="https://www.bestpuppyguide.com/puppy-weaning-food/">{{myVar}}</a></h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row service_2_middle clearfix">
+                        <div class="col-sm-6 center_middle_left_service clearfix">
+                            <div class="center_7_middle_left_inner_1 clearfix">
+                                <div class="card">
+                                    <div class="row card-image">
+                                        <img class="img-fluid" src="image/3.png">
+                                    </div><!-- card image -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 service_2_middle_right clearfix">
+                            <div class="service_2_middle_right_inner clearfix"
+                                ng-init="myWeb_3 = 'https://www.purina.eu/dogs/health-and-nutrition/daily-feeding-guide/feeding-your-adult-dog#tab-14601-3'; myVar = 'LEARN MORE'">
+                                <h2>Feeding Your Adult Dog</h2>
+                                <p>Adult dogs require sufficient nutrients to meet energy needs and to maintain and
+                                    repair body tissues. The amount you feed your adult <br> dog should be based on
+                                    his
+                                    or her size and energy output. Activity levels may vary dramatically between
+                                    pets,
+                                    and will play an <br> important role in determining caloric intake.
+                                </p>
+                                <h5><a ng-href="{{myWeb_3}}">{{myVar}}</a></h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row service_2_middle clearfix">
+                        <div class="col-sm-6 center_middle_left_service clearfix">
+                            <div class="center_7_middle_left_inner_1 clearfix">
+                                <div class="card">
+                                    <div class="row card-image">
+                                        <img class="img-fluid" src="image/4.png">
+                                    </div><!-- card image -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 service_2_middle_right clearfix">
+                            <div class="service_2_middle_right_inner clearfix"
+                                ng-init="myWeb_4 = 'https://www.petmd.com/dog/slideshows/8-tips-feeding-your-senior-dog'; myVar = 'LEARN MORE'">
+                                <h2>Feeding Your Senior Dog</h2>
+                                <p>Dogs begin to show visible age-related changes at about seven to 12 years of
+                                    age. There are metabolic, immunologic and body composition changes, too. Some of
+                                    these may be unavoidable while others can be managed with diet. When feeding
+                                    your
+                                    older dog, the main objective should be to maintain health and optimum body
+                                    weight,
+                                    slow development of chronic disease.
+                                </p>
+                                <h5><a ng-href="{{myWeb_4}}">{{myVar}}</a></h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row service_2_middle clearfix">
+                        <div class="col-sm-6 center_middle_left_service clearfix">
+                            <div class="center_7_middle_left_inner_1 clearfix">
+                                <div class="card">
+                                    <div class="row card-image">
+                                        <img class="img-fluid" src="image/5.png">
+                                    </div><!-- card image -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 service_2_middle_right clearfix">
+                            <div class="service_2_middle_right_inner clearfix"
+                                ng-init="myWeb_5 = 'https://pets.webmd.com/dogs/features/overweight-dogs-and-canine-weight-loss-diets#4'; myVar = 'LEARN MORE'">
+                                <h2>Overweight Dogs</h2>
+                                <p>One of the most common pitfalls dog parents should watch out for is overfeeding.
+                                    Attempts to shower our dogs with love by means of big meals and lots of tasty
+                                    treats
+                                    are sweet, but misguided. In dogs, as <br> with humans, extra weight can lead to
+                                    health problems. Be sure to indulge your four-legged friend with affection, not
+                                    food!
+                                </p>
+                                <h5><a ng-href="{{myWeb_5}}">{{myVar}}</a></h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row service_2_middle clearfix">
+                        <div class="col-sm-6 center_middle_left_service clearfix">
+                            <div class="center_7_middle_left_inner_1 clearfix">
+                                <div class="card">
+                                    <div class="row card-image">
+                                        <img class="img-fluid" src="image/6.png">
+                                    </div><!-- card image -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 service_2_middle_right clearfix">
+                            <div class="service_2_middle_right_inner clearfix"
+                                ng-init="myWeb_6 = 'https://retrievist.akc.org/reviews/best-slow-feed-dog-bowls/'; myVar = 'LEARN MORE'">
+                                <h2>Best Slow Feeder Bowls for Dogs</h2>
+                                <p>When dogs love food a little too much they sometimes eat too fast, which can lead
+                                    to
+                                    digestive issues like vomiting, gas, and overeating. Dogs who eat too quickly
+                                    tend
+                                    to swallow air, which can increase the risk of bloat in some large dogs. If
+                                    you're
+                                    looking for a slow feeder bowl, we're here to help. Here are the ones we like,
+                                    based
+                                    on size, price, material, and effectiveness.
+                                </p>
+                                <h5><a ng-href="{{myWeb_6}}">{{myVar}}</a></h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <br>
+    <footer class="container-fluid py-5" style="background-color:rgb(0, 0, 0);">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-6 ">
+                            <div class="logo-part">
+                                <img src="./image/logodog2.png" class="w-50 logo-footer">
+                                <p class="text_footer" style=" margin-left:-15%;"><i class="fas fa-home me-3"></i>
+                                    590
+                                    Cach Mang Thang 8 Road,
+                                    Distric 3, Ho Chi Minh
+                                    City.VietNam</p>
+                                <p class="text_footer" style=" margin-left:-15%;"> <i
+                                        class="fas fa-phone me-3"></i>(+84)123456789
+
+                                </p>
+                                <p class="text_footer" style=" margin-left:-15%;"> <i class="fas fa-envelope me-3"></i>
+                                    patronasupport@gmail.com
+                                </p>
+
+
+                            </div>
+                        </div>
+                        <div class="col-md-6 px-4">
+                            <h6> About Patrona Team</h6>
+                            <p class="text_footer">Choose your decision below</p>
+                            <a href="./aboutus.html" class="btn-footer"> About Us </a><br>
+                            <a href="./contactus.html" class="btn-footer"> Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-6 px-4">
+                            <h6> Jump Links</h6>
+                            <div class="row ">
+                                <div class="col-md-6">
+                                    <ul>
+                                        <li> <a href="./index.html" class="text_footer"> Home</a> </li>
+                                        <li> <a href="./dogs.html" class="text_footer"> Dogs</a> </li>
+                                        <li> <a href="./nutrition.html" class="text_footer"> Nutrition</a> </li>
+                                        <li> <a href="./gallery.html" class="text_footer"> Gallery</a> </li>
+                                        <li> <a href="./aboutus.html" class="text_footer"> About us</a> </li>
+                                        <li> <a href="./contactus.html" class="text_footer"> Contact us</a> </li>
+                                        <li> <a href="./faq.html" class="text_footer"> FAQ</a> </li>
+                                    </ul>
+                                </div>
+
+                                <div class="col-md-6 px-4">
+                                    <ul>
+                                        <li> <a href="https://aptech.fpt.edu.vn/" class="text_footer"> Aptech</a>
+                                        </li>
+                                        <li> <a href="https://fpt.com.vn/vi" class="text_footer"> FPT Company</a>
+                                        </li>
+                                        <li> <a href="#" class="text_footer"> Group1</a> </li>
+
+                                    </ul>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 ">
+                            <h6> Our Social Media </h6>
+                            <div class="social" style="padding-bottom: 10px;">
+                                <a href="" class="me-4 text-reset glowing-btn glowing-facebook">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+
+                                <a href="" class="me-4 text-reset glowing-btn  glowing-twitter">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+
+                                <a href="" class="me-4 text-reset glowing-btn glowing-google">
+                                    <i class="fab fa-google"></i>
+                                </a>
+
+                                <a href="" class="me-4 text-reset glowing-btn glowing-instagram">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+
+                                <a href="" class="me-4 text-reset glowing-btn glowing-github">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                            <form class="form-footer my-3">
+                                <input type="text" placeholder="Want to find us...." name="search">
+                                <input type="button" value="Go">
+                            </form>
+                            <p class="text_footer"
+                                style="font-size: 12px;margin-left:-100px;text-shadow:0.5px 0.5px white;">©2022
+                                COPYRIGHT BY
+                                PATRONA.
+                                DEVELOPED
+                                BY
+                                GROUP 1. </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </footer>
+    <div class="scroll-top not-visible  ">
+        <i class="fa fa-angle-up  "></i>
+    </div>
+
+</html>
+
+</body>
+<script>
+    $(document).ready(function () {
+
+        // Scroll
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 400) {
+                $('.scroll-top').removeClass('not-visible');
+            } else {
+                $('.scroll-top').addClass('not-visible');
+            }
+        });
+
+        $('.scroll-top').click(function (e) {
+            e.preventDefault();
+            $('html,body').animate({ scrollTop: 0 }, 500);
+        });
+
+        // animation
+        $(window).scroll(function () {
+            $('.slideamin').each(function () {
+                let pos = $(this).offset().top;
+
+                let winTop = $(window).scrollTop();
+                if (pos < winTop + 600) {
+                    $(this).addClass('slide');
+                }
+            });
+        });
+        $(window).scroll(function () {
+            $('.slideamin2').each(function () {
+                let pos = $(this).offset().top;
+
+                let winTop = $(window).scrollTop();
+                if (pos < winTop + 600) {
+                    $(this).addClass('slide2');
+                }
+            });
+        });
+        $(window).scroll(function () {
+            $('.slideamin3').each(function () {
+                let pos = $(this).offset().top;
+
+                let winTop = $(window).scrollTop();
+                if (pos < winTop + 600) {
+                    $(this).addClass('slide3');
+                }
+            });
+        });
+    });</script>
+
+</html>

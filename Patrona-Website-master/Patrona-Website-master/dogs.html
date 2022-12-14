@@ -1,0 +1,1635 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./image/logo-dog-removebg-preview.png" type="image/jpg">
+    <title>Patrona</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet"
+        id="bootstrap-css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="assets/images/logo-dog-removebg-preview.png" type="image/jpg">
+    <!-- font-awesome -->
+    <script src="dirPagination.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/paginationjs/2.1.4/pagination.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/paginationjs/2.1.4/pagination.css" />
+    <style>
+        * {
+            box-sizing: inherit;
+        }
+
+        ::-webkit-scrollbar {
+            width: 10px;
+            height: 10px;
+            background-color: #f9f9f9;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            border-radius: 10px;
+            background-color: rgba(0, 0, 0, 0.35);
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: #606060;
+        }
+
+        .slideamin {
+            visibility: hidden;
+        }
+
+        .slide {
+            animation: slide linear 1s;
+            -webkit-animation: slide linear 1s;
+            -moz-animation: slide linear 1s;
+            -o-animation: slide linear 1s;
+            visibility: visible;
+        }
+
+        @keyframes slide {
+            0% {
+                opacity: 0;
+                transform: translateY(70%);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @-webkit-keyframes slide {
+            0% {
+                opacity: 0;
+                transform: translateY(70%);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @-moz-keyframes slide {
+            0% {
+                opacity: 0;
+                transform: translateY(70%);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @-o-keyframes slide {
+            0% {
+                opacity: 0;
+                transform: translateY(70%);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .carousel-item {
+            height: 100vh;
+            background: no-repeat center center scroll;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+
+
+        .nav-link:hover {
+            font-variation-settings: "wght" 582;
+            letter-spacing: 5px;
+
+        }
+
+        nav {
+            position: absolute !important;
+            z-index: 150;
+            margin-top: -30px;
+
+        }
+
+        section .cloudwave {
+            position: absolute;
+            left: 0;
+            margin-top: 60px;
+            width: 100%;
+            height: 100px;
+            background: url(./image/wave_effect.png);
+            background-size: 1000px 100px;
+
+        }
+
+        section .cloudwave.wave1 {
+            animation: animate 30s linear infinite;
+            z-index: 100;
+            opacity: 1;
+            animation-delay: 0s;
+            top: 0px;
+        }
+
+        @keyframes animate {
+            0% {
+                background-position-x: 0;
+            }
+
+            100% {
+                background-position-x: 1000px;
+            }
+
+        }
+
+        section .cloudwave.wave2 {
+            animation: animate2 15s linear infinite;
+            z-index: 99;
+            opacity: 0.5;
+            animation-delay: -5s;
+            top: 15px;
+        }
+
+        @keyframes animate2 {
+            0% {
+                background-position-x: 0;
+            }
+
+            100% {
+                background-position-x: -1000px;
+            }
+
+        }
+
+        section .cloudwave.wave3 {
+            animation: animate3 10s linear infinite;
+            z-index: 98;
+            opacity: 0.7;
+            animation-delay: -4s;
+        }
+
+        @keyframes animate3 {
+            0% {
+                background-position-x: 0;
+            }
+
+            100% {
+                background-position-x: 1000px;
+            }
+
+        }
+
+        .slideamin {
+            visibility: hidden;
+        }
+
+        .slide {
+            animation: slide linear 1s;
+            -webkit-animation: slide linear 1s;
+            -moz-animation: slide linear 1s;
+            -o-animation: slide linear 1s;
+            visibility: visible;
+        }
+
+        @keyframes slide {
+            0% {
+                opacity: 0;
+                transform: translateY(70%);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @-webkit-keyframes slide {
+            0% {
+                opacity: 0;
+                transform: translateY(70%);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @-moz-keyframes slide {
+            0% {
+                opacity: 0;
+                transform: translateY(70%);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @-o-keyframes slide {
+            0% {
+                opacity: 0;
+                transform: translateY(70%);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* end header css  */
+
+        html {
+            box-sizing: border-box;
+            font-family: "Open Sans", Arial, sans-serif;
+            font-size: 62.5%;
+            font-weight: 400;
+            line-height: 1.6rem;
+            scroll-behavior: smooth;
+        }
+
+        ::-webkit-scrollbar {
+            width: 10px;
+            height: 10px;
+            background-color: #f9f9f9;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            border-radius: 10px;
+            background-color: rgba(0, 0, 0, 0.35);
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: #606060;
+        }
+
+        /* animation */
+        @keyframes cartGrowth {
+            0% {
+                opacity: 0;
+                transform: scale(0);
+            }
+
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @-webkit-keyframes cartGrowth {
+            0% {
+                opacity: 0;
+                transform: scale(0);
+            }
+
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @-moz-keyframes cartGrowth {
+            0% {
+                opacity: 0;
+                transform: scale(0);
+            }
+
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @-o-keyframes cartGrowth {
+            0% {
+                opacity: 0;
+                transform: scale(0);
+            }
+
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        /* filter */
+        .dog-title h2 {
+            font-size: 4rem;
+            font-weight: 600;
+            margin: 10px 0 30px;
+        }
+
+        .form-filter {
+            font-size: 1.8rem;
+            font-weight: 500;
+            padding: 8px 10px;
+            background-color: #444;
+            color: #fff;
+            margin: 0;
+        }
+
+        .form-type {
+            font-size: 1.5rem;
+            color: brown;
+            padding: 4px 0 4px 4px;
+            font-weight: 500;
+        }
+
+        .form-filter__td {
+            font-size: 1.4rem;
+        }
+
+        .form-filter__input {
+            transform: translateY(1px);
+        }
+
+        .form-filter__input,
+        .label {
+            cursor: pointer;
+            padding-left: 4px;
+        }
+
+        .form-filter__type {
+            padding-left: 2px;
+            position: relative;
+            right: 0;
+            transition: right linear 0.1s;
+            -webkit-transition: right linear 0.1s;
+            -moz-transition: right linear 0.1s;
+            -o-transition: right linear 0.1s;
+        }
+
+        .form-filter__type:hover {
+            right: -6px;
+            color: rgb(233, 30, 30);
+            font-weight: 500;
+        }
+
+        .form-filter__btn {
+            border: none;
+            margin-bottom: 10px;
+            font-size: 1.6rem;
+            color: #fff;
+            padding: 4px 20px;
+            margin-left: 8px;
+            font-weight: 600;
+            background-color: rgb(97, 96, 96);
+            transition: all ease-out 0.3;
+            -webkit-transition: all ease-out 0.3;
+            -moz-transition: all ease-out 0.3;
+            -o-transition: all ease-out 0.3;
+        }
+
+        .form-filter__btn:hover {
+            background-color: #222;
+            color: #fff;
+            /* background-color: #777; */
+        }
+
+        .cart {
+            margin-bottom: 10px;
+            border-radius: 3px;
+            position: relative;
+            transition: transform linear 0.2s;
+            will-change: transform;
+            animation: cartGrowth ease 0.8s;
+            -webkit-animation: cartGrowth ease 0.8s;
+            -moz-animation: cartGrowth ease 0.8s;
+            -o-animation: cartGrowth ease 0.8s;
+        }
+
+        .cart:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 1px 20px 0 rgba(0, 0, 0, 0.3);
+        }
+
+        .header-cart {
+            overflow: hidden;
+            position: relative;
+            /* min-height: 100px; */
+            height: 170px;
+        }
+
+        .header-cart .header-cart__img {
+            height: 170px;
+            border-radius: 3px;
+            transform: scale(1);
+            -webkit-transform: scale(1);
+            -moz-transform: scale(1);
+            -o-transform: scale(1);
+            transition: all ease-in-out .3s;
+            -webkit-transition: all ease-in-out .3s;
+            -moz-transition: all ease-in-out .3s;
+            -o-transition: all ease-in-out .3s;
+        }
+
+        .header-cart:hover .header-cart__img {
+            transform: scale(1.1);
+            -webkit-transform: scale(1.1);
+            -moz-transform: scale(1.1);
+            -o-transform: scale(1.1);
+        }
+
+        .body-cart {
+            margin: 5px 0 10px;
+        }
+
+        .body-cart__name {
+            font-size: 1.6rem;
+            font-weight: 600;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 1;
+        }
+
+        .body-cart__sub {
+            margin-bottom: 0;
+            font-size: 1.2rem;
+            color: rgb(149, 140, 140);
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+        }
+
+        .cart-footer__btn {
+            transform: translateY(-5px);
+            margin-bottom: 5px;
+            border: none;
+            background-color: #fff;
+            color: brown;
+            font-size: 1.4rem;
+            padding: 0;
+        }
+
+        .cart-footer__btn:hover {
+            color: #000;
+        }
+
+        /* pagination css */
+        .pagination {
+            justify-content: center;
+            list-style: none;
+        }
+
+        .pagination__item-link {
+            font-size: 1.4rem;
+            padding: 4px;
+            text-decoration: none;
+            margin-right: 5px;
+        }
+
+        /* Modal */
+
+        .modal .modal-header {
+            padding: 10px 10px;
+            border-bottom: none;
+        }
+
+        .modal .modal-header .close {
+            font-size: 28px;
+            opacity: 1;
+            position: absolute;
+            padding: 0;
+            width: 30px;
+            height: 30px;
+            margin: 0;
+            right: 10px;
+            top: 10px;
+            z-index: 999;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            border-radius: 50%;
+            background-color: #fff;
+            color: rgb(125, 116, 116);
+            outline: none;
+        }
+
+        .modal .modal-header .close:hover {
+            color: #000;
+        }
+
+        .table-modal__title {
+            font-size: 1.4rem;
+            font-weight: 500;
+        }
+
+        .table-modal__content {
+            font-size: 1.3rem;
+            color: #404040;
+        }
+
+        .logo-footer {
+            margin-bottom: 40px;
+            box-shadow: 1px 1px rgb(98, 96, 96);
+        }
+
+        footer {
+            color: grey;
+        }
+
+        footer .text_footer {
+            font-size: 12px;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        footer h6 {
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 40px;
+            position: relative;
+            color: white;
+        }
+
+        footer h6:after {
+            position: absolute;
+            content: "";
+            background: gray;
+            width: 12%;
+            height: 1px;
+            left: 0;
+            bottom: -20px;
+        }
+
+        .btn-footer {
+            color: grey;
+
+            text-decoration: none;
+            border: 1px solid;
+            border-radius: 43px;
+            font-size: 13px;
+            padding: 7px 30px;
+            line-height: 47px;
+        }
+
+        .btn-footer:hover {
+
+            text-decoration: none;
+
+        }
+
+        .form-footer input[type="text"] {
+            border: none;
+            border-radius: 16px 0 0 16px;
+            outline: none;
+            padding-left: 10px;
+
+        }
+
+        ::placeholder {
+            font-size: 10px;
+            padding-left: 10px;
+            font-style: italic;
+        }
+
+        .form-footer input[type="button"] {
+            border: none;
+            background: #232323;
+            margin-left: -5px;
+            color: #fff;
+            outline: none;
+            border-radius: 0 16px 16px 0;
+            padding: 2px 12px;
+        }
+
+        .social .fa {
+            color: grey;
+            font-size: 22px;
+            padding: 10px 15px;
+            background: #3c3c3c;
+        }
+
+        footer ul li {
+            list-style: none;
+            display: block;
+        }
+
+        footer ul {
+            padding-left: 0;
+        }
+
+        footer ul li .text_footer {
+            text-decoration: none;
+            color: grey;
+            text-decoration: none;
+        }
+
+        .text_footer:hover {
+            text-decoration: none;
+            color: #f5f5f5 !important;
+
+        }
+
+        .logo-part {
+            border-right: 1px solid grey;
+            height: 100%;
+        }
+
+        /* text effect */
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        :root {
+            --color-firstlayer: #050606;
+            --color-secondlayer: #fff4f4;
+            --color-thirdlayer: #353434;
+            --color-fouthlayer: #3e3e3e;
+            --color-fifthlayer: #000000;
+        }
+
+
+
+        .content {
+            display: flex;
+            align-content: center;
+            justify-content: center;
+            margin-top: 1% !important;
+        }
+
+        .text_shadows {
+            text-shadow: 3px 3px 0 var(--color-secondlayer), 6px 6px 0 var(--color-thirdlayer),
+                9px 9px var(--color-fouthlayer), 12px 12px 0 var(--color-fifthlayer);
+            font-family: bungee, sans-serif;
+            font-weight: 400;
+            text-transform: uppercase;
+            font-size: calc(2rem + 5vw);
+            text-align: center;
+            margin: 0;
+            color: var(--color-firstlayer);
+            color: transparent;
+            background-image: linear-gradient(to bottom, white, black);
+            background-size: 100px;
+            background-clip: text;
+            animation: shadows 1.2s ease-in infinite, move 1.2s ease-in infinite;
+            letter-spacing: 0.4rem;
+            border-radius: 0% 0% 20% 20%;
+        }
+
+        @keyframes shadows {
+            0% {
+                text-shadow: none;
+            }
+
+            10% {
+                text-shadow: 3px 3px 0 var(--color-secondlayer);
+            }
+
+            20% {
+                text-shadow: 3px 3px 0 var(--color-secondlayer),
+                    6px 6px 0 var(--color-thirdlayer);
+            }
+
+            30% {
+                text-shadow: 3px 3px 0 var(--color-secondlayer),
+                    6px 6px 0 var(--color-thirdlayer), 9px 9px var(--color-fouthlayer);
+            }
+
+            40% {
+                text-shadow: 3px 3px 0 var(--color-secondlayer),
+                    6px 6px 0 var(--color-thirdlayer), 9px 9px var(--color-fouthlayer),
+                    12px 12px 0 var(--color-fifthlayer);
+            }
+
+            50% {
+                text-shadow: 3px 3px 0 var(--color-secondlayer),
+                    6px 6px 0 var(--color-thirdlayer), 9px 9px var(--color-fouthlayer),
+                    12px 12px 0 var(--color-fifthlayer);
+            }
+
+            60% {
+                text-shadow: 3px 3px 0 var(--color-secondlayer),
+                    6px 6px 0 var(--color-thirdlayer), 9px 9px var(--color-fouthlayer),
+                    12px 12px 0 var(--color-fifthlayer);
+            }
+
+            70% {
+                text-shadow: 3px 3px 0 var(--color-secondlayer),
+                    6px 6px 0 var(--color-thirdlayer), 9px 9px var(--color-fouthlayer);
+            }
+
+            80% {
+                text-shadow: 3px 3px 0 var(--color-secondlayer),
+                    6px 6px 0 var(--color-thirdlayer);
+            }
+
+            90% {
+                text-shadow: 3px 3px 0 var(--color-secondlayer);
+            }
+
+            100% {
+                text-shadow: none;
+            }
+        }
+
+        @keyframes move {
+            0% {
+                transform: translate(0px, 0px);
+            }
+
+            40% {
+                transform: translate(-12px, -12px);
+            }
+
+            50% {
+                transform: translate(-12px, -12px);
+            }
+
+            60% {
+                transform: translate(-12px, -12px);
+            }
+
+            100% {
+                transform: translate(0px, 0px);
+            }
+        }
+
+
+        .bg-grey {
+            background: rgba(33, 133, 137, 0.296);
+        }
+
+
+
+        @import url("https://fonts.googleapis.com/css?family=Raleway");
+
+        :root {
+            --glow-color: rgb(255, 255, 255);
+        }
+
+        .glowing-btn {
+            position: relative;
+            color: var(--glow-color);
+            cursor: pointer;
+
+            padding-left: 0.2em;
+            padding-right: 0em;
+            border: 0.15em solid var(--glow-color);
+            border-radius: 0.45em;
+            background: none;
+
+
+            font-size: 2.5em;
+            font-weight: 900;
+
+            width: 0.5em;
+
+            -webkit-box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
+                0px 0px 0.5em 0px var(--glow-color);
+            -moz-box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
+                0px 0px 0.5em 0px var(--glow-color);
+            box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
+                0px 0px 0.5em 0px var(--glow-color);
+            animation: border-flicker 2s linear infinite;
+        }
+
+        .glowing-btn::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            opacity: 0.7;
+            filter: blur(1em);
+            transform: translateY(120%) rotateX(95deg) scale(1, 0.35);
+            background: var(--glow-color);
+            pointer-events: none;
+        }
+
+        .glowing-btn::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            opacity: 0;
+            z-index: -1;
+            background-color: var(--glow-color);
+            box-shadow: 0 0 2em 0.2em var(--glow-color);
+            transition: opacity 100ms linear;
+        }
+
+        .glowing-btn:hover {
+            text-decoration: none;
+            color: rgba(255, 255, 255, 0.8);
+            text-shadow: none;
+            animation: none;
+        }
+
+        .glowing-facebook:hover {
+            text-decoration: none;
+            background-color: blue;
+            text-shadow: none;
+            animation: none;
+        }
+
+        .glowing-twitter:hover {
+            text-decoration: none;
+            background-color: blue;
+            text-shadow: none;
+            animation: none;
+        }
+
+        .glowing-google:hover {
+            text-decoration: none;
+            background-image: linear-gradient(to bottom, #ff0000, #FCEE21, #07f11b, #006aff);
+            text-shadow: none;
+            animation: none;
+        }
+
+        .glowing-instagram:hover {
+            text-decoration: none;
+            background-image: linear-gradient(to right, #ed6ea0, #ec8c69, #f7186a, #FBB03B);
+            text-shadow: none;
+            animation: none;
+        }
+
+        .glowing-github:hover {
+            text-decoration: none;
+            background-color: black;
+            text-shadow: none;
+            animation: none;
+        }
+
+
+        .glowing-btn:hover .glowing-txt {
+            animation: none;
+        }
+
+        .glowing-btn:hover .faulty-letter {
+            animation: none;
+            text-shadow: none;
+            opacity: 1;
+        }
+
+        .glowing-btn:hover:before {
+            filter: blur(1.5em);
+            opacity: 1;
+        }
+
+        .glowing-btn:hover:after {
+            opacity: 1;
+        }
+
+        @keyframes faulty-flicker {
+            0% {
+                opacity: 0.1;
+            }
+
+            2% {
+                opacity: 0.1;
+            }
+
+            4% {
+                opacity: 0.5;
+            }
+
+            19% {
+                opacity: 0.5;
+            }
+
+            21% {
+                opacity: 0.1;
+            }
+
+            23% {
+                opacity: 1;
+            }
+
+            80% {
+                opacity: 0.5;
+            }
+
+            83% {
+                opacity: 0.4;
+            }
+
+            87% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes text-flicker {
+            0% {
+                opacity: 0.1;
+            }
+
+            2% {
+                opacity: 1;
+            }
+
+            8% {
+                opacity: 0.1;
+            }
+
+            9% {
+                opacity: 1;
+            }
+
+            12% {
+                opacity: 0.1;
+            }
+
+            20% {
+                opacity: 1;
+            }
+
+            25% {
+                opacity: 0.3;
+            }
+
+            30% {
+                opacity: 1;
+            }
+
+            70% {
+                opacity: 0.7;
+            }
+
+            72% {
+                opacity: 0.2;
+            }
+
+            77% {
+                opacity: 0.9;
+            }
+
+            100% {
+                opacity: 0.9;
+            }
+        }
+
+        @keyframes border-flicker {
+            0% {
+                opacity: 0.1;
+            }
+
+            2% {
+                opacity: 1;
+            }
+
+            4% {
+                opacity: 0.1;
+            }
+
+            8% {
+                opacity: 1;
+            }
+
+            70% {
+                opacity: 0.7;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+
+        .pagination a {
+            color: white;
+            float: left;
+            padding: 16px 16px;
+            text-decoration: none;
+            background-color: #000;
+            border: solid white;
+
+        }
+
+        .pagination a:hover {
+            color: red;
+
+
+        }
+
+        .pagination a:focus {
+            background: grey;
+            color: red;
+
+
+        }
+
+        /* backtop */
+        .scroll-top {
+            width: 50px;
+            height: 50px;
+            font-size: 1.9rem;
+            color: rgb(247, 247, 247);
+            background-image: linear-gradient(to bottom, rgb(33, 32, 32), rgb(0, 0, 0), rgb(165, 168, 168));
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            right: 20px;
+            bottom: 40px;
+            box-shadow: 0px 5px 5px rgb(255, 255, 255);
+            -webkit-transition: all 0.4s ease-out;
+            -moz-transition: all 0.4s ease-out;
+            -o-transition: all 0.4s ease-out;
+            transition: all 0.4s ease-out;
+        }
+
+        .scroll-top:hover {
+            background-color: #f83c3c;
+            box-shadow: 0 2px 4px rgb(255, 0, 0);
+        }
+
+        .not-visible {
+            bottom: -50px;
+            visibility: hidden;
+            -webkit-opacity: 0;
+            opacity: 0;
+        }
+    </style>
+
+</head>
+
+<body ng-app="myApp">
+    <header>
+        <section>
+
+
+            <div class="cloudwave wave1"></div>
+            <div class="cloudwave wave2"></div>
+            <div class="cloudwave wave3"></div>
+
+
+        </section>
+        <nav class=" my-nav navbar navbar-light navbar-expand-lg bg-white  " style="width:100%">
+            <div class="container">
+
+
+                <a class="navbar-brand    " href="./index.html"><img src="./image/Logo.png" alt=""
+                        style="width: 100px;   " class="logo"></a>
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"
+                    style="font-size:23px;">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto  ">
+                        <li class="nav-item  " style="padding-top: 20px;">
+                            <a class="nav-link" href="./index.html" style="font-size:15px ;">Home <span
+                                    class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item" style="padding-top: 20px;padding-left: 20px;">
+                            <a class="nav-link" href="./dogs.html" style="font-size:15px ;">Dogs</a>
+                        </li>
+                        <li class="nav-item" style="padding-top: 20px;padding-left: 20px;">
+                            <a class="nav-link" href="./nutrition.html" style="font-size:15px ;">Nutrition</a>
+                        </li>
+                        <li class="nav-item" style="padding-top: 20px;padding-left: 20px;">
+                            <a class="nav-link " href="./gallery.html" style="font-size:15px ;">Gallery</a>
+                        </li>
+                        <li class="nav-item" style="padding-top: 20px;padding-left: 20px;">
+                            <a class="nav-link " href="./aboutus.html" style="font-size:15px ;">About us</a>
+                        </li>
+                        <li class="nav-item" style="padding-top: 20px;padding-left: 20px;">
+                            <a class="nav-link " href="./contactus.html" style="font-size:15px ;">Contact us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div id="carouselExampleIndicators" class="carousel slide my-carousel my-carousel" data-ride="carousel">
+
+
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+
+            <div class="carousel-inner" role="listbox">
+                <div class="carousel-item active   "
+                    style="background-image: url(./image/slider1.jpg); color:white;text-shadow:1px 1px black;  ">
+                    <h3 style="font-size: 50px;position:absolute;margin-top:22%;margin-left:35%;" class="">More Than A
+                        Passion!
+                        <p
+                            style="font-size: 30px;position:relative;margin-top:1%;margin-left:-30%;font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;">
+
+
+                            This is not a common website.This is the inspiration and destination of the owner </p>
+                    </h3>
+
+                </div>
+                <div class="carousel-item  "
+                    style="background-image: url(./image/slider2.jpg); color:white;;text-shadow:1px 1px black;">
+                    <h3 style="font-size: 50px;position:absolute;margin-top:20%;margin-left:30%;">Not Only Love, But
+                        Also Insight!
+                        <p
+                            style="font-size: 30px;position:relative;margin-top:0%;margin-left:-8%;font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;">
+                            Love wouldn't exist without insight, because insight contains love</p>
+                    </h3>
+
+
+                </div>
+                <div class="carousel-item "
+                    style="background-image: url(./image/slider3.jpg); color:white;;text-shadow:1px 1px black;">
+                    <h3 style="font-size: 50px;margin-top:23%;position:absolute;margin-left:36%">No Distance Between Us!
+                        <p
+                            style="font-size: 30px;position:relative;margin-top:1%;margin-left:-25%;font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;">
+                            Together we make a strong chain to mount the dog's lovers and
+                            beyond</p>
+                    </h3>
+
+
+
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+
+
+    </header>
+
+    <div class="container">
+        <div class="dog-title text-center">
+            <h2>All Dog Breeds</h2>
+        </div>
+
+
+
+        <div class="row">
+            <div class="col-md-3">
+                <form action="" id="frmFilter">
+                    <p class="form-filter">Filter</p>
+                    <div class="table-responsive">
+                        <table class="table table-borderless table-hover" id="table_filter">
+                            <thead>
+                                <tr>
+                                    <th class="table-active"><label class=" form-type" for="">Size</label></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                <tr>
+                                    <td class="form-filter__td"><span class="form-filter__type"><input
+                                                class="form-filter__input" type="radio" name="size" id="small"
+                                                ng-model="size.Size" value="Small"><label class="label"
+                                                for="small">Small</label></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="form-filter__td"><span class="form-filter__type"><input
+                                                class="form-filter__input" type="radio" name="size" id="medium"
+                                                ng-model="size.Size" value="Medium"><label class="label"
+                                                for="medium">Medium</label></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="form-filter__td"><span class="form-filter__type"><input
+                                                class="form-filter__input" type="radio" name="size" id="large"
+                                                ng-model="size.Size" value="Large"><label class="label"
+                                                for="large">Large</label></span>
+                                    </td>
+                                </tr>
+
+                                <thead>
+                                    <tr>
+                                        <th class="table-active"><label class="form-type" for="">Color</label></th>
+                                    </tr>
+                                </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="form-filter__td"><span class="form-filter__type"><input
+                                                class="form-filter__input" type="radio" name="color" id="white"
+                                                ng-model="color.Color" value="White"><label class="label"
+                                                for="white">White</label> </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="form-filter__td"><span class="form-filter__type"><input
+                                                class="form-filter__input" type="radio" name="color" id="black"
+                                                ng-model="color.Color" value="Black"><label class="label"
+                                                for="black">Black</label></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="form-filter__td"><span class="form-filter__type"><input
+                                                class="form-filter__input" type="radio" name="color" id="others"
+                                                ng-model="color.Color" value="Others"><label class="label"
+                                                for="others">Others</label></span>
+                                    </td>
+                                </tr>
+
+                                <thead>
+                                    <tr>
+                                        <th class="table-active"><label class="form-type" for="">Character</label></th>
+                                    </tr>
+                                </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="form-filter__td"><span class="form-filter__type"><input
+                                                class="form-filter__input" type="radio" name="character"
+                                                ng-model="character.Character" id="hypoallergenic"
+                                                value="Hypoallergenic"><label class="label"
+                                                for="hypoallergenic">Hypoallergenic</label></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="form-filter__td"><span class="form-filter__type"><input
+                                                class="form-filter__input" type="radio" name="character" id="fluffy"
+                                                ng-model="character.Character" value="Fluffy"><label class="label"
+                                                for="fluffy">Fluffy</label></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="form-filter__td"><span class="form-filter__type"><input
+                                                class="form-filter__input" type="radio" name="character" id="smartest"
+                                                ng-model="character.Character" value="Smartest"><label class="label"
+                                                for="smartest">Smartest</label></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="form-filter__td"><span class="form-filter__type"><input
+                                                class="form-filter__input" type="radio" name="character" id="bguard"
+                                                ng-model="character.Character" value="Best guard"><label class="label"
+                                                for="bguard">Best
+                                                guard</label></span>
+                                    </td>
+                                </tr>
+
+
+                                <thead>
+                                    <tr>
+                                        <th class="table-active"><label class="form-type" for="">Geography</label></th>
+                                    </tr>
+                                </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="form-filter__td"><span class="form-filter__type"><input
+                                                class="form-filter__input" type="radio" name="Geography" id="asia"
+                                                ng-model="geography.Geography" value="Asia"><label class="label"
+                                                for="asia">Asia</label></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="form-filter__td"><span class="form-filter__type"><input
+                                                class="form-filter__input" type="radio" name="Geography" id="n-merica"
+                                                ng-model="geography.Geography" value="North America"><label
+                                                class="label" for="n-merica">America</label></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="form-filter__td"><span class="form-filter__type"><input
+                                                class="form-filter__input" type="radio" name="Geography" id="europe"
+                                                ng-model="geography.Geography" value="Europe"><label class="label"
+                                                for="europe">Europe</label></span>
+                                    </td>
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+                        <button class="btn form-filter__btn" type="submit">Reset</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="col-md-9" ng-controller="myCtr">
+                <div class="row">
+
+                    <div dir-paginate=" dog in dogs | filter:size | filter:color  | filter:character | filter:geography |itemsPerPage: 9  "
+                        class="cart col-6 col-md-4">
+                        <div class="header-cart">
+                            <div><img class="header-cart__img" src="image/{{dog.Url}}" width="100%" alt="">
+                            </div>
+                        </div>
+                        <div class="body-cart">
+                            <h4 class="body-cart__name">{{dog.Name}}</h4>
+                            <p class="body-cart__sub">{{dog.Overview}}</p>
+                        </div>
+                        <div class="footer-cart">
+                            <button ng-click="modal()" type="button" class="cart-footer__btn" data-bs-toggle="modal"
+                                data-bs-target="#myModal"
+                                style="cursor: pointer;border: none !important;outline: none;">Read more</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- modal -->
+                <div class="modal fade" id="myModal" role="dialog">
+                    <div class="modal-dialog modal-lg">
+                        <!-- Modal content -->
+                        <div class="modal-content">
+                            <div class="modal-header" style="position: relative;">
+                                <button type="button" class="close"
+                                    data-bs-dismiss="modal"><span>&times;</span></button>
+                            </div>
+                            <div class="modal-body" id="modalDog">
+
+                            </div>
+                            <!-- Modal footer -->
+                            <div class="modal-footer">
+                                <button type="button" class="btn" data-bs-dismiss="modal"
+                                    style="background-color: rgb(97, 96, 96);color: #fff;padding: 5px 10px;font-size: 1.4rem;">Close</button>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+                <dir-pagination-controls>
+
+                </dir-pagination-controls>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <footer class="container-fluid py-5" style="background-color:rgb(0, 0, 0);">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-6 ">
+                            <div class="logo-part">
+                                <img src="./image/logodog2.png" class="w-50 logo-footer">
+                                <p class="text_footer" style=" margin-left:-15%;"><i class="fas fa-home me-3"></i>
+                                    590
+                                    Cach Mang Thang 8 Road,
+                                    Distric 3, Ho Chi Minh
+                                    City.VietNam</p>
+                                <p class="text_footer" style=" margin-left:-15%;"> <i
+                                        class="fas fa-phone me-3"></i>(+84)123456789
+
+                                </p>
+                                <p class="text_footer" style=" margin-left:-15%;"> <i class="fas fa-envelope me-3"></i>
+                                    patronasupport@gmail.com
+                                </p>
+
+
+                            </div>
+                        </div>
+                        <div class="col-md-6 px-4">
+                            <h6 style="font-size: 20px;"> About Patrona Team</h6>
+                            <p class="text_footer">Choose your decision below</p>
+                            <a href="./aboutus.html" class="btn-footer"> About Us </a><br>
+                            <a href="./contactus.html" class="btn-footer"> Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-6 px-4">
+                            <h6 style="font-size: 20px;"> Jump Links</h6>
+                            <div class="row ">
+                                <div class="col-md-6">
+                                    <ul>
+                                        <li> <a href="./index.html" class="text_footer"> Home</a> </li>
+                                        <li> <a href="./dogs.html" class="text_footer"> Dogs</a> </li>
+                                        <li> <a href="./nutrition.html" class="text_footer"> Nutrition</a> </li>
+                                        <li> <a href="./gallery.html" class="text_footer"> Gallery</a> </li>
+                                        <li> <a href="./aboutus.html" class="text_footer"> About us</a> </li>
+                                        <li> <a href="./contactus.html" class="text_footer"> Contact us</a> </li>
+                                        <li> <a href="./faq.html" class="text_footer"> FAQ</a> </li>
+                                    </ul>
+                                </div>
+
+                                <div class="col-md-6 px-4">
+                                    <ul>
+                                        <li> <a href="https://aptech.fpt.edu.vn/" class="text_footer"> Aptech</a>
+                                        </li>
+                                        <li> <a href="https://fpt.com.vn/vi" class="text_footer"> FPT Company</a>
+                                        </li>
+                                        <li> <a href="#" class="text_footer"> Group1</a> </li>
+
+                                    </ul>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 ">
+                            <h6 style="font-size: 20px;"> Our Social Media </h6>
+                            <div class="social" style="padding-bottom: 10px;">
+                                <a href="" class="me-4 text-reset glowing-btn glowing-facebook">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+
+                                <a href="" class="me-4 text-reset glowing-btn  glowing-twitter">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+
+                                <a href="" class="me-4 text-reset glowing-btn glowing-google">
+                                    <i class="fab fa-google"></i>
+                                </a>
+
+                                <a href="" class="me-4 text-reset glowing-btn glowing-instagram">
+                                    <i class="fab fa-instagram "></i>
+                                </a>
+
+                                <a href="" class="me-4 text-reset glowing-btn glowing-github">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                            <form class="form-footer my-3">
+                                <input type="text" placeholder="Want to find us...." name="search">
+                                <input type="button" value="Go">
+                            </form>
+                            <p class="text_footer"
+                                style="font-size: 12px;margin-left:-100px;text-shadow:0.5px 0.5px white;">©2022
+                                COPYRIGHT BY
+                                PATRONA.
+                                DEVELOPED
+                                BY
+                                GROUP 1. </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </footer>
+    <div class="scroll-top not-visible  ">
+        <i class="fa fa-angle-up  "></i>
+    </div>
+
+
+    <script>
+        $(document).ready(function () {
+
+            // Scroll
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 400) {
+                    $('.scroll-top').removeClass('not-visible');
+                } else {
+                    $('.scroll-top').addClass('not-visible');
+                }
+            });
+
+            $('.scroll-top').click(function (e) {
+                e.preventDefault();
+                $('html,body').animate({ scrollTop: 0 }, 500);
+            });
+
+            // animation
+            $(window).scroll(function () {
+                $('.slideamin').each(function () {
+                    let pos = $(this).offset().top;
+
+                    let winTop = $(window).scrollTop();
+                    if (pos < winTop + 600) {
+                        $(this).addClass('slide');
+                    }
+                });
+            });
+            $(window).scroll(function () {
+                $('.slideamin2').each(function () {
+                    let pos = $(this).offset().top;
+
+                    let winTop = $(window).scrollTop();
+                    if (pos < winTop + 600) {
+                        $(this).addClass('slide2');
+                    }
+                });
+            });
+            $(window).scroll(function () {
+                $('.slideamin3').each(function () {
+                    let pos = $(this).offset().top;
+
+                    let winTop = $(window).scrollTop();
+                    if (pos < winTop + 600) {
+                        $(this).addClass('slide3');
+                    }
+                });
+            });
+        });
+
+        //dog modal   //
+
+        let app = angular.module("myApp", ['angularUtils.directives.dirPagination']);//'ui.bootstrap'
+
+        app.controller("myCtr", function ($scope, $http) {
+
+            $http.get("data_dogs.json").then(function (response) {
+                $scope.dogs = [];
+                $scope.dogs = response.data;
+            });
+
+            $scope.modal = function () {
+                let id = $(this)[0].dog.id
+                console.log(id)
+                let dog = $scope.dogs.filter(ele => ele.id == id)
+                setModal(dog[0])
+                // $('#myModal').modal('show');
+            }
+
+            function setModal(dog) {
+                console.log(dog)
+                let modalPanel =
+                    `    <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div>
+                                <img src="image/${dog.Url}" style="width:100%;max-height:380px;border-radius:5px" alt="">
+                            </div>
+                            <div>
+                                <h2 style="text-align:center;padding:5px 0">${dog.Name}</h2>
+                            </div>
+                            <div>
+                                <table class="table table-bordered table-hover">
+                                    <tbody>
+                                        <tr>
+                                            <td class="table-modal__title">Origin</td>
+                                            <td class="table-modal__content">${dog.Origin}</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="table-modal__title">Size</td>
+                                            <td class="table-modal__content">${dog.Size}</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="table-modal__title">Color</td>
+                                            <td class="table-modal__content">${dog.Color}</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="table-modal__title">Type</td>
+                                            <td class="table-modal__content">${dog.Type}</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="table-modal__title">Character</td>
+                                            <td class="table-modal__content">${dog.Character}</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="table-modal__title">Height</td>
+                                            <td class="table-modal__content">${dog.Height}</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="table-modal__title">Weight</td>
+                                            <td class="table-modal__content">${dog.Weight}</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="table-modal__title">Breed_Group</td>
+                                            <td class="table-modal__content">${dog.Breed_Group}</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="table-modal__title">Temperament</td>
+                                            <td class="table-modal__content">${dog.Temperament}</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="table-modal__title">Overview</td>
+                                            <td class="table-modal__content">${dog.Overview}</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="table-modal__title">History</td>
+                                            <td class="table-modal__content">${dog.History}</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>`;
+
+                document.querySelector('.modal-body').innerHTML = modalPanel
+            }
+        });
+    </script>
+
+</html>
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Link jquery js-->
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+
+<!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+    integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+    integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+    crossorigin="anonymous"></script>

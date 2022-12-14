@@ -1,0 +1,1379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patrona </title>
+
+    <link rel="shortcut icon" href="./image/logo-dog-removebg-preview.png" type="image/jpg">
+    <link rel="stylesheet" href="assets/font/fontawesome-free-6.2.0-web/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet"
+        id="bootstrap-css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+
+    <style>
+        * {
+            box-sizing: inherit;
+        }
+
+        .carousel-item {
+            height: 100vh;
+            background: no-repeat center center scroll;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+
+
+        .nav-link:hover {
+            font-variation-settings: "wght" 582;
+            letter-spacing: 5px;
+
+        }
+
+        nav {
+            position: absolute !important;
+            z-index: 150;
+            margin-top: -30px;
+
+        }
+
+        section .cloudwave {
+            position: absolute;
+            left: 0;
+            margin-top: 60px;
+            width: 100%;
+            height: 100px;
+            background: url(./image/wave_effect.png);
+            background-size: 1000px 100px;
+
+        }
+
+        section .cloudwave.wave1 {
+            animation: animate 30s linear infinite;
+            z-index: 100;
+            opacity: 1;
+            animation-delay: 0s;
+            top: 0px;
+        }
+
+        @keyframes animate {
+            0% {
+                background-position-x: 0;
+            }
+
+            100% {
+                background-position-x: 1000px;
+            }
+
+        }
+
+        section .cloudwave.wave2 {
+            animation: animate2 15s linear infinite;
+            z-index: 99;
+            opacity: 0.5;
+            animation-delay: -5s;
+            top: 15px;
+        }
+
+        @keyframes animate2 {
+            0% {
+                background-position-x: 0;
+            }
+
+            100% {
+                background-position-x: -1000px;
+            }
+
+        }
+
+        section .cloudwave.wave3 {
+            animation: animate3 10s linear infinite;
+            z-index: 98;
+            opacity: 0.7;
+            animation-delay: -4s;
+        }
+
+        @keyframes animate3 {
+            0% {
+                background-position-x: 0;
+            }
+
+            100% {
+                background-position-x: 1000px;
+            }
+
+        }
+
+        .slideamin {
+            visibility: hidden;
+        }
+
+        .slide {
+            animation: slide linear 1s;
+            -webkit-animation: slide linear 1s;
+            -moz-animation: slide linear 1s;
+            -o-animation: slide linear 1s;
+            visibility: visible;
+        }
+
+        @keyframes slide {
+            0% {
+                opacity: 0;
+                transform: translateY(70%);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @-webkit-keyframes slide {
+            0% {
+                opacity: 0;
+                transform: translateY(70%);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @-moz-keyframes slide {
+            0% {
+                opacity: 0;
+                transform: translateY(70%);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @-o-keyframes slide {
+            0% {
+                opacity: 0;
+                transform: translateY(70%);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* end header css  */
+
+
+
+
+
+        html {
+            box-sizing: border-box;
+            font-family: "Open Sans", Arial, sans-serif;
+            font-size: 62.5%;
+            font-weight: 400;
+            line-height: 1.6rem;
+            scroll-behavior: smooth;
+        }
+
+        ::-webkit-scrollbar {
+            width: 10px;
+            height: 10px;
+            background-color: #f9f9f9;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            border-radius: 10px;
+            background-color: rgba(0, 0, 0, 0.35);
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: #606060;
+        }
+
+        /* Contact css */
+        .contact-area {
+            padding-bottom: 34px;
+        }
+
+        .pd-15 {
+            padding: 0 15px;
+        }
+
+        .contact-mes__heading,
+        .contact-info__heading {
+            font-size: 2.4rem;
+            font-weight: 700;
+            margin: 32px 0 30px 0;
+        }
+
+        .contact-mes__form-input {
+            padding: 10px;
+            font-size: 1.4rem;
+            margin-bottom: 30px;
+            border: solid thin rgba(0, 0, 0, 0.05);
+            background-color: rgba(249, 249, 249, 0.5);
+        }
+
+        .contact-map__content {
+            width: 100%;
+            margin-bottom: 36px;
+        }
+
+        .mes__form-btn {
+            padding: 0 20px;
+            line-height: 42px;
+            font-size: 1.5rem;
+            border-radius: 5px;
+            color: #fff;
+            border: none;
+            min-width: 130px;
+            cursor: pointer;
+            background-color: rgb(97, 96, 96);
+            transition: all ease-out 0.3;
+            -webkit-transition: all ease-out 0.3;
+            -moz-transition: all ease-out 0.3;
+            -o-transition: all ease-out 0.3;
+            transform: translateX(15px);
+        }
+
+        .mes__form-btn:hover {
+            background-color: #222;
+        }
+
+        .contact-info__list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .contact-info__item {
+            padding-bottom: 32px;
+            display: flex;
+        }
+
+        .contact-info__item-icon,
+        .contact-info__item-icon2 {
+            font-size: 2.2rem;
+            border: solid thin #ccc;
+            border-radius: 50%;
+            padding: 18px;
+            color: rgb(114, 30, 30);
+        }
+
+        .contact-info__item-icon2 {
+            padding: 18px 17px;
+        }
+
+        .contact-info__item-content {
+            padding-left: 8px;
+            font-size: 1.7rem;
+        }
+
+        .top-down {
+            transform: translateY(16px);
+        }
+
+        .contact-info__item-link {
+            text-decoration: none;
+        }
+
+        /* backtop */
+        .scroll-top {
+            width: 50px;
+            height: 50px;
+            font-size: 1.9rem;
+            color: #fff;
+            background-color: red;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            right: 20px;
+            bottom: 40px;
+            box-shadow: 0 1px 3px rgb(0, 0, 0);
+            -webkit-transition: all 0.4s ease-out;
+            -moz-transition: all 0.4s ease-out;
+            -o-transition: all 0.4s ease-out;
+            transition: all 0.4s ease-out;
+        }
+
+        .scroll-top:hover {
+            background-color: #f83c3c;
+            box-shadow: 0 2px 4px rgb(0, 0, 0);
+        }
+
+        .not-visible {
+            bottom: -50px;
+            visibility: hidden;
+            -webkit-opacity: 0;
+            opacity: 0;
+        }
+
+        /* Animation visibility from bottom to top */
+        .slideamin {
+            visibility: hidden;
+        }
+
+        .slide {
+            animation: slide linear 1s;
+            -webkit-animation: slide linear 1s;
+            -moz-animation: slide linear 1s;
+            -o-animation: slide linear 1s;
+            visibility: visible;
+        }
+
+        @keyframes slide {
+            0% {
+                opacity: 0;
+                transform: translateY(70%);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @-webkit-keyframes slide {
+            0% {
+                opacity: 0;
+                transform: translateY(70%);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @-moz-keyframes slide {
+            0% {
+                opacity: 0;
+                transform: translateY(70%);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @-o-keyframes slide {
+            0% {
+                opacity: 0;
+                transform: translateY(70%);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Animation visibility from left to right */
+        .slideamin2 {
+            visibility: hidden;
+        }
+
+        .slide2 {
+            animation: slide2 linear 1s;
+            -webkit-animation: slide2 linear 1s;
+            -moz-animation: slide2 linear 1s;
+            -o-animation: slide2 linear 1s;
+            visibility: visible;
+        }
+
+        @keyframes slide2 {
+            0% {
+                opacity: 0;
+                transform: translateX(-70%);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @-webkit-keyframes slide2 {
+            0% {
+                opacity: 0;
+                transform: translateX(-70%);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @-moz-keyframes slide2 {
+            0% {
+                opacity: 0;
+                transform: translateX(-70%);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @-o-keyframes slide2 {
+            0% {
+                opacity: 0;
+                transform: translateX(-70%);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        /* Animation visibility from right to left */
+        .slideamin3 {
+            visibility: hidden;
+        }
+
+        .slide3 {
+            animation: slide3 linear 1s;
+            -webkit-animation: slide3 linear 1s;
+            -moz-animation: slide3 linear 1s;
+            -o-animation: slide3 linear 1s;
+            visibility: visible;
+        }
+
+        @keyframes slide3 {
+            0% {
+                opacity: 0;
+                transform: translateX(70%);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @-webkit-keyframes slide3 {
+            0% {
+                opacity: 0;
+                transform: translateX(70%);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @-moz-keyframes slide3 {
+            0% {
+                opacity: 0;
+                transform: translateX(70%);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @-o-keyframes slide3 {
+            0% {
+                opacity: 0;
+                transform: translateX(70%);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .logo-footer {
+            margin-bottom: 40px;
+            box-shadow: 1px 1px rgb(98, 96, 96);
+        }
+
+        footer {
+            color: grey;
+        }
+
+        footer .text_footer {
+            font-size: 12px;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        footer h6 {
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 40px;
+            position: relative;
+            color: white;
+        }
+
+        footer h6:after {
+            position: absolute;
+            content: "";
+            background: gray;
+            width: 12%;
+            height: 1px;
+            left: 0;
+            bottom: -20px;
+        }
+
+        .btn-footer {
+            color: grey;
+
+            text-decoration: none;
+            border: 1px solid;
+            border-radius: 43px;
+            font-size: 13px;
+            padding: 7px 30px;
+            line-height: 47px;
+        }
+
+        .btn-footer:hover {
+
+            text-decoration: none;
+
+        }
+
+        .form-footer input[type="text"] {
+            border: none;
+            border-radius: 16px 0 0 16px;
+            outline: none;
+            padding-left: 10px;
+
+        }
+
+        ::placeholder {
+            font-size: 10px;
+            padding-left: 10px;
+            font-style: italic;
+        }
+
+        .form-footer input[type="button"] {
+            border: none;
+            background: #232323;
+            margin-left: -5px;
+            color: #fff;
+            outline: none;
+            border-radius: 0 16px 16px 0;
+            padding: 2px 12px;
+        }
+
+        .social .fa {
+            color: grey;
+            font-size: 22px;
+            padding: 10px 15px;
+            background: #3c3c3c;
+        }
+
+        footer ul li {
+            list-style: none;
+            display: block;
+        }
+
+        footer ul {
+            padding-left: 0;
+        }
+
+        footer ul li .text_footer {
+            text-decoration: none;
+            color: grey;
+            text-decoration: none;
+        }
+
+        .text_footer:hover {
+            text-decoration: none;
+            color: #f5f5f5 !important;
+
+        }
+
+        .logo-part {
+            border-right: 1px solid grey;
+            height: 100%;
+        }
+
+        /* text effect */
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        :root {
+            --color-firstlayer: #050606;
+            --color-secondlayer: #fff4f4;
+            --color-thirdlayer: #353434;
+            --color-fouthlayer: #3e3e3e;
+            --color-fifthlayer: #000000;
+        }
+
+
+
+        .content {
+            display: flex;
+            align-content: center;
+            justify-content: center;
+            margin-top: 1% !important;
+        }
+
+        .text_shadows {
+            text-shadow: 3px 3px 0 var(--color-secondlayer), 6px 6px 0 var(--color-thirdlayer),
+                9px 9px var(--color-fouthlayer), 12px 12px 0 var(--color-fifthlayer);
+            font-family: bungee, sans-serif;
+            font-weight: 400;
+            text-transform: uppercase;
+            font-size: calc(2rem + 5vw);
+            text-align: center;
+            margin: 0;
+            color: var(--color-firstlayer);
+            color: transparent;
+            background-image: linear-gradient(to bottom, white, black);
+            background-size: 100px;
+            background-clip: text;
+            animation: shadows 1.2s ease-in infinite, move 1.2s ease-in infinite;
+            letter-spacing: 0.4rem;
+            border-radius: 0% 0% 20% 20%;
+        }
+
+        @keyframes shadows {
+            0% {
+                text-shadow: none;
+            }
+
+            10% {
+                text-shadow: 3px 3px 0 var(--color-secondlayer);
+            }
+
+            20% {
+                text-shadow: 3px 3px 0 var(--color-secondlayer),
+                    6px 6px 0 var(--color-thirdlayer);
+            }
+
+            30% {
+                text-shadow: 3px 3px 0 var(--color-secondlayer),
+                    6px 6px 0 var(--color-thirdlayer), 9px 9px var(--color-fouthlayer);
+            }
+
+            40% {
+                text-shadow: 3px 3px 0 var(--color-secondlayer),
+                    6px 6px 0 var(--color-thirdlayer), 9px 9px var(--color-fouthlayer),
+                    12px 12px 0 var(--color-fifthlayer);
+            }
+
+            50% {
+                text-shadow: 3px 3px 0 var(--color-secondlayer),
+                    6px 6px 0 var(--color-thirdlayer), 9px 9px var(--color-fouthlayer),
+                    12px 12px 0 var(--color-fifthlayer);
+            }
+
+            60% {
+                text-shadow: 3px 3px 0 var(--color-secondlayer),
+                    6px 6px 0 var(--color-thirdlayer), 9px 9px var(--color-fouthlayer),
+                    12px 12px 0 var(--color-fifthlayer);
+            }
+
+            70% {
+                text-shadow: 3px 3px 0 var(--color-secondlayer),
+                    6px 6px 0 var(--color-thirdlayer), 9px 9px var(--color-fouthlayer);
+            }
+
+            80% {
+                text-shadow: 3px 3px 0 var(--color-secondlayer),
+                    6px 6px 0 var(--color-thirdlayer);
+            }
+
+            90% {
+                text-shadow: 3px 3px 0 var(--color-secondlayer);
+            }
+
+            100% {
+                text-shadow: none;
+            }
+        }
+
+        @keyframes move {
+            0% {
+                transform: translate(0px, 0px);
+            }
+
+            40% {
+                transform: translate(-12px, -12px);
+            }
+
+            50% {
+                transform: translate(-12px, -12px);
+            }
+
+            60% {
+                transform: translate(-12px, -12px);
+            }
+
+            100% {
+                transform: translate(0px, 0px);
+            }
+        }
+
+
+        .bg-grey {
+            background: rgba(33, 133, 137, 0.296);
+        }
+
+
+
+        @import url("https://fonts.googleapis.com/css?family=Raleway");
+
+        :root {
+            --glow-color: rgb(255, 255, 255);
+        }
+
+        .glowing-btn {
+            position: relative;
+            color: var(--glow-color);
+            cursor: pointer;
+
+            padding-left: 0.2em;
+            padding-right: 0em;
+            border: 0.15em solid var(--glow-color);
+            border-radius: 0.45em;
+            background: none;
+
+
+            font-size: 2.5em;
+            font-weight: 900;
+
+            width: 0.5em;
+
+            -webkit-box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
+                0px 0px 0.5em 0px var(--glow-color);
+            -moz-box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
+                0px 0px 0.5em 0px var(--glow-color);
+            box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
+                0px 0px 0.5em 0px var(--glow-color);
+            animation: border-flicker 2s linear infinite;
+        }
+
+        .glowing-btn::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            opacity: 0.7;
+            filter: blur(1em);
+            transform: translateY(120%) rotateX(95deg) scale(1, 0.35);
+            background: var(--glow-color);
+            pointer-events: none;
+        }
+
+        .glowing-btn::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            opacity: 0;
+            z-index: -1;
+            background-color: var(--glow-color);
+            box-shadow: 0 0 2em 0.2em var(--glow-color);
+            transition: opacity 100ms linear;
+        }
+
+        .glowing-btn:hover {
+            text-decoration: none;
+            color: rgba(255, 255, 255, 0.8);
+            text-shadow: none;
+            animation: none;
+        }
+
+        .glowing-facebook:hover {
+            text-decoration: none;
+            background-color: blue;
+            text-shadow: none;
+            animation: none;
+        }
+
+        .glowing-twitter:hover {
+            text-decoration: none;
+            background-color: blue;
+            text-shadow: none;
+            animation: none;
+        }
+
+        .glowing-google:hover {
+            text-decoration: none;
+            background-image: linear-gradient(to bottom, #ff0000, #FCEE21, #07f11b, #006aff);
+            text-shadow: none;
+            animation: none;
+        }
+
+        .glowing-instagram:hover {
+            text-decoration: none;
+            background-image: linear-gradient(to right, #ed6ea0, #ec8c69, #f7186a, #FBB03B);
+            text-shadow: none;
+            animation: none;
+        }
+
+        .glowing-github:hover {
+            text-decoration: none;
+            background-color: black;
+            text-shadow: none;
+            animation: none;
+        }
+
+
+        .glowing-btn:hover .glowing-txt {
+            animation: none;
+        }
+
+        .glowing-btn:hover .faulty-letter {
+            animation: none;
+            text-shadow: none;
+            opacity: 1;
+        }
+
+        .glowing-btn:hover:before {
+            filter: blur(1.5em);
+            opacity: 1;
+        }
+
+        .glowing-btn:hover:after {
+            opacity: 1;
+        }
+
+        @keyframes faulty-flicker {
+            0% {
+                opacity: 0.1;
+            }
+
+            2% {
+                opacity: 0.1;
+            }
+
+            4% {
+                opacity: 0.5;
+            }
+
+            19% {
+                opacity: 0.5;
+            }
+
+            21% {
+                opacity: 0.1;
+            }
+
+            23% {
+                opacity: 1;
+            }
+
+            80% {
+                opacity: 0.5;
+            }
+
+            83% {
+                opacity: 0.4;
+            }
+
+            87% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes text-flicker {
+            0% {
+                opacity: 0.1;
+            }
+
+            2% {
+                opacity: 1;
+            }
+
+            8% {
+                opacity: 0.1;
+            }
+
+            9% {
+                opacity: 1;
+            }
+
+            12% {
+                opacity: 0.1;
+            }
+
+            20% {
+                opacity: 1;
+            }
+
+            25% {
+                opacity: 0.3;
+            }
+
+            30% {
+                opacity: 1;
+            }
+
+            70% {
+                opacity: 0.7;
+            }
+
+            72% {
+                opacity: 0.2;
+            }
+
+            77% {
+                opacity: 0.9;
+            }
+
+            100% {
+                opacity: 0.9;
+            }
+        }
+
+        @keyframes border-flicker {
+            0% {
+                opacity: 0.1;
+            }
+
+            2% {
+                opacity: 1;
+            }
+
+            4% {
+                opacity: 0.1;
+            }
+
+            8% {
+                opacity: 1;
+            }
+
+            70% {
+                opacity: 0.7;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        /* backtop */
+        .scroll-top {
+            width: 50px;
+            height: 50px;
+            font-size: 1.9rem;
+            color: rgb(247, 247, 247);
+            background-image: linear-gradient(to bottom, rgb(33, 32, 32), rgb(0, 0, 0), rgb(165, 168, 168));
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            right: 20px;
+            bottom: 40px;
+            box-shadow: 0px 5px 5px rgb(255, 255, 255);
+            -webkit-transition: all 0.4s ease-out;
+            -moz-transition: all 0.4s ease-out;
+            -o-transition: all 0.4s ease-out;
+            transition: all 0.4s ease-out;
+        }
+
+        .scroll-top:hover {
+            background-color: #f83c3c;
+            box-shadow: 0 2px 4px rgb(255, 0, 0);
+        }
+
+        .not-visible {
+            bottom: -50px;
+            visibility: hidden;
+            -webkit-opacity: 0;
+            opacity: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <section>
+
+
+            <div class="cloudwave wave1"></div>
+            <div class="cloudwave wave2"></div>
+            <div class="cloudwave wave3"></div>
+
+
+        </section>
+        <nav class=" my-nav navbar navbar-light navbar-expand-lg bg-white  " style="width:100%">
+            <div class="container">
+
+
+                <a class="navbar-brand    " href="./index.html"><img src="./image/Logo.png" alt=""
+                        style="width: 100px;   " class="logo"></a>
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"
+                    style="font-size:23px;">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto  ">
+                        <li class="nav-item  " style="padding-top: 20px;  ">
+                            <a class="nav-link" href="./index.html" style="font-size:15px ;">Home <span
+                                    class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item" style="padding-top: 20px;padding-left: 20px;">
+                            <a class="nav-link" href="./dogs.html" style="font-size:15px ;">Dogs</a>
+                        </li>
+                        <li class="nav-item" style="padding-top: 20px;padding-left: 20px;">
+                            <a class="nav-link" href="./nutrition.html" style="font-size:15px ;">Nutrition</a>
+                        </li>
+                        <li class="nav-item" style="padding-top: 20px;padding-left: 20px;">
+                            <a class="nav-link " href="./gallery.html" style="font-size:15px ;">Gallery</a>
+                        </li>
+                        <li class="nav-item" style="padding-top: 20px;padding-left: 20px;">
+                            <a class="nav-link " href="./aboutus.html" style="font-size:15px ;">About us</a>
+                        </li>
+                        <li class="nav-item" style="padding-top: 20px;padding-left: 20px;">
+                            <a class="nav-link " href="./contactus.html" style="font-size:15px ;">Contact us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div id="carouselExampleIndicators" class="carousel slide my-carousel my-carousel" data-ride="carousel">
+
+
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+
+            <div class="carousel-inner" role="listbox">
+                <div class="carousel-item active   "
+                    style="background-image: url(./image/slider1.jpg); color:white;text-shadow:1px 1px black;  ">
+                    <h3 style="font-size: 50px;position:absolute;margin-top:22%;margin-left:35%; " class="">
+                        More Than A
+                        Passion!
+                        <p
+                            style="font-size: 30px;position:relative;margin-top:1%;margin-left:-30%;font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;">
+
+
+                            This is not a common website.This is the inspiration and destination of the owner </p>
+                    </h3>
+
+                </div>
+                <div class="carousel-item  "
+                    style="background-image: url(./image/slider2.jpg); color:white;;text-shadow:1px 1px black;">
+                    <h3 style="font-size: 50px;position:absolute;margin-top:20%;margin-left:30%;">Not Only
+                        Love, But
+                        Also Insight!
+                        <p
+                            style="font-size: 30px;position:relative;margin-top:0%;margin-left:-8%;font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;">
+                            Love wouldn't exist without insight, because insight contains love</p>
+                    </h3>
+
+
+                </div>
+                <div class="carousel-item "
+                    style="background-image: url(./image/slider3.jpg); color:white;;text-shadow:1px 1px black;">
+                    <h3 style="font-size: 50px;margin-top:23%;position:absolute;margin-left:36%">No Distance Between Us!
+                        <p
+                            style="font-size: 30px;position:relative;margin-top:1%;margin-left:-25%;font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;">
+                            Together we make a strong chain to mount the dog's lovers and
+                            beyond</p>
+                    </h3>
+
+
+
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+
+
+    </header>
+
+
+    <!-- Contact area begin -->
+    <div class="contact-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 pd-15">
+                    <div class="contact-mes slideamin2">
+                        <h2 class="contact-mes__heading">LEAVE A COMMENT</h2>
+                        <form action="" class="contact-mes__form">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <input type="text" name="name" class="form-control contact-mes__form-input"
+                                        placeholder="Your name" required>
+                                </div>
+                                <div class="col-sm-6">
+                                    <input type="number" name="phone" class="form-control contact-mes__form-input"
+                                        placeholder="Your phone" required>
+                                </div>
+                                <div class="col-12">
+                                    <input type="email" name="email" class="form-control contact-mes__form-input"
+                                        placeholder="Your email"
+                                        pattern="^[a-zA-Z][a-z0-9_\.]{5,32}@[a-z0-9]{2,}(\.[a-z0-9]{2,4}){1,2}$"
+                                        required>
+                                </div>
+                                <div class="col-12">
+                                    <textarea name="message" rows="4" class="form-control contact-mes__form-input"
+                                        placeholder="Your messages" required></textarea>
+                                </div>
+                                <div class="contact-mes__form-btn">
+                                    <button type="submit" class="mes__form-btn">Send Message</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 pd-15 slideamin3">
+                    <div class="contact-info">
+                        <h2 class="contact-info__heading">CONTACT US</h2>
+                        <ul class="contact-info__list">
+                            <li class="contact-info__item">
+                                <i class="contact-info__item-icon  fas fa-phone me-3"></i>
+                                <span class="contact-info__item-content top-down">(+84)123456789</span>
+                            </li>
+                            <li class="contact-info__item">
+                                <i class="contact-info__item-icon fas fa-envelope me-3"></i>
+                                <span class="contact-info__item-content top-down"><a class="contact-info__item-link"
+                                        href="mailto:patrona@gmail.com?subject=support">patronasupport@gmail.com</a>
+                                </span>
+                            </li>
+                            <li class="contact-info__item">
+                                <i class="contact-info__item-icon2 fas fa-home me-3"></i>
+                                <span class="contact-info__item-content">Address:590 Cach Mang Thang Tam Road,
+                                    District 3, Ho Chi Minh City. VietNam</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="contact-map slideamin">
+        <div class="container">
+            <div id="contact-map__content">
+                <iframe class="contact-map__content"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.325247592162!2d106.6641083140241!3d10.786382261961224!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752ed23c80767d%3A0x5a981a5efee9fd7d!2zNTkwIEPDoWNoIE3huqFuZyBUaMOhbmcgVMOhbSwgUGjGsOG7nW5nIDExLCBRdeG6rW4gMywgVGjDoG5oIHBo4buRIEjhu5MgQ2jDrSBNaW5oLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1627407917877!5m2!1svi!2s"
+                    height="500" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </div>
+    <!-- Contact area end -->
+
+
+
+    <!-- Scroll to top start (backtop) -->
+
+    <!-- Scroll to Top End (backtop) -->
+    <!-- footer  -->
+    <footer class="container-fluid py-5" style="background-color:rgb(0, 0, 0);">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-6 ">
+                            <div class="logo-part">
+                                <img src="./image/logodog2.png" class="w-50 logo-footer">
+                                <p class="text_footer" style=" margin-left:-15%;"><i class="fas fa-home me-3"></i> 590
+                                    Cach Mang Thang 8 Road,
+                                    Distric 3, Ho Chi Minh
+                                    City.VietNam</p>
+                                <p class="text_footer" style=" margin-left:-15%;"> <i
+                                        class="fas fa-phone me-3"></i>(+84)123456789
+
+                                </p>
+                                <p class="text_footer" style=" margin-left:-15%;"> <i class="fas fa-envelope me-3"></i>
+                                    patronasupport@gmail.com
+                                </p>
+
+
+                            </div>
+                        </div>
+                        <div class="col-md-6 px-4">
+                            <h6 style="font-size: 20px;"> About Patrona Team</h6>
+                            <p class="text_footer">Choose your decision below</p>
+                            <a href="./aboutus.html" class="btn-footer"> About Us </a><br>
+                            <a href="./contactus.html" class="btn-footer"> Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-6 px-4">
+                            <h6 style="font-size: 20px;"> Jump Links</h6>
+                            <div class="row ">
+                                <div class="col-md-6">
+                                    <ul>
+                                        <li> <a href="./index.html" class="text_footer"> Home</a> </li>
+                                        <li> <a href="./dogs.html" class="text_footer"> Dogs</a> </li>
+                                        <li> <a href="./nutrition.html" class="text_footer"> Nutrition</a> </li>
+                                        <li> <a href="./gallery.html" class="text_footer"> Gallery</a> </li>
+                                        <li> <a href="./aboutus.html" class="text_footer"> About us</a> </li>
+                                        <li> <a href="./contactus.html" class="text_footer"> Contact us</a> </li>
+                                        <li> <a href="./faq.html" class="text_footer"> FAQ</a> </li>
+                                    </ul>
+                                </div>
+
+                                <div class="col-md-6 px-4">
+                                    <ul>
+                                        <li> <a href="https://aptech.fpt.edu.vn/" class="text_footer"> Aptech</a> </li>
+                                        <li> <a href="https://fpt.com.vn/vi" class="text_footer"> FPT Company</a> </li>
+                                        <li> <a href="#" class="text_footer"> Group1</a> </li>
+
+                                    </ul>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 ">
+                            <h6 style="font-size: 20px;"> Our Social Media </h6>
+                            <div class="social" style="padding-bottom: 10px;">
+                                <a href="" class="me-4 text-reset glowing-btn glowing-facebook">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+
+                                <a href="" class="me-4 text-reset glowing-btn  glowing-twitter">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+
+                                <a href="" class="me-4 text-reset glowing-btn glowing-google">
+                                    <i class="fab fa-google"></i>
+                                </a>
+
+                                <a href="" class="me-4 text-reset glowing-btn glowing-instagram">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+
+                                <a href="" class="me-4 text-reset glowing-btn glowing-github">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                            <form class="form-footer my-3">
+                                <input type="text" placeholder="Want to find us...." name="search">
+                                <input type="button" value="Go">
+                            </form>
+                            <p class="text_footer"
+                                style="font-size: 12px;margin-left:-100px;text-shadow:0.5px 0.5px white;">©2022
+                                COPYRIGHT BY
+                                PATRONA.
+                                DEVELOPED
+                                BY
+                                GROUP 1. </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </footer>
+    <div class="scroll-top not-visible">
+        <i class="fa fa-angle-up"></i>
+    </div>
+    <!-- Link jquery js-->
+    <script src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap min js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready(function () {
+
+            // Scroll
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 400) {
+                    $('.scroll-top').removeClass('not-visible');
+                } else {
+                    $('.scroll-top').addClass('not-visible');
+                }
+            });
+
+            $('.scroll-top').click(function (e) {
+                e.preventDefault();
+                $('html,body').animate({ scrollTop: 0 }, 500);
+            });
+
+            // animation
+            $(window).scroll(function () {
+                $('.slideamin').each(function () {
+                    let pos = $(this).offset().top;
+
+                    let winTop = $(window).scrollTop();
+                    if (pos < winTop + 600) {
+                        $(this).addClass('slide');
+                    }
+                });
+            });
+            $(window).scroll(function () {
+                $('.slideamin2').each(function () {
+                    let pos = $(this).offset().top;
+
+                    let winTop = $(window).scrollTop();
+                    if (pos < winTop + 600) {
+                        $(this).addClass('slide2');
+                    }
+                });
+            });
+            $(window).scroll(function () {
+                $('.slideamin3').each(function () {
+                    let pos = $(this).offset().top;
+
+                    let winTop = $(window).scrollTop();
+                    if (pos < winTop + 600) {
+                        $(this).addClass('slide3');
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+
+</html>
